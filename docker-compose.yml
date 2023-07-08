@@ -10,8 +10,8 @@ services:
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASnSWORD}@postgres:5432/${POSTGRES_DB}?schema=public
     volumes:
-      - .:/usr/src/app
-      - ./usr/src/app/node_modules
+      - .:/usr/src/app@id:terminal.integrated.commandsToSkipShell,terminal.integrated.sendKeybindingsToShell,terminal.integrated.allowChords
+      - ./node_modules:/usr/src/app/node_modules
     # Run in dev Mode: npm run start:dev
     command: npm run start:dev
     ports:
